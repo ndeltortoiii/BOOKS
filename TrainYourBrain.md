@@ -133,6 +133,7 @@
     4. Retention booster—margin notes
       1.  Next level of engagement 
     5. Retention blaster—full notes
+
 #####Section 2: The Components of Your Record-Breaking Life
 1. Five characteristics of an energizing goal
    1. 3 things you need
