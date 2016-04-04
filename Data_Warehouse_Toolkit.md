@@ -231,7 +231,64 @@
   * avoding the "too many dimensions" trap
   * surrogate keys
   * market basket analysis
-    
+* Four-Step Dimensional Design Process
+  1. Select business process
+    * supported by source data collection sysstem
+    * Not organized by business department
+    * Not by function
+      1. raw materials 
+      2. purchasing
+      3. orders
+      4. shipments
+      5. invoicing
+      6. inventory
+      7. general ledger
+     * Publish data once
+  2. Declare grain of business process
+    * Exactly what a fact table represents
+    * **"How do you describe a single row on the fact table?"**
+  3. Choose dimensions
+    * **"How do business people describe data that results from process."**
+    * Discrete text attributes
+  4. Identify numeric facts for fact table row
+    * **"What are we measuring"**
+    * True to step 2 grain
+    * Interview Business Persons
+ * Retail Case Study
+   1. Select the business process 
+     * stock keeping units (SKU) and universal product codes (UPC) same grain
+     * Data collection points
+     * some of the most significant management decisioins have to do with pricing and promotions
+     * The business process we're going to model is POS retail sales
+       1. What are business requirements
+       2. Available data
+   2. Declare the grain
+     * Preferably you should develop a dimensional models for the most atomic information captured by a business process.  Atomic daa is the most detailed information collected; such data cannot be subdivided further
+     * aggregated data good for performance tuning
+     * individual line item
+   3. Choose the dimensions
+     * Dimensions
+       1. date
+       2. product
+       3. store
+       4. promotion
+     * If the additional dimension violates the grain by causing additional fact rows to be generated, then the grain statement must be revised to accommodate this dimension
+   4. Identify the facts
+     * Facts collected
+       1. the quantity
+       2. per unit sales price
+       3. the sales dollar amount
+     * store calculations that are fact in database
+     * storing it eliminates the possibility of user error
+     * refer to gross profit consistently
+     * all users access the data via this view and no users with ad hoc query tools can sneak 
+     * percentage and ratios, such as gross margin are nonadditive
+     * ratio of the sums, not the sum of the ratios
+     * sales dollars and sales quantities before dividing the total dollars by the total quantity sold
+     * to estimate the number of rows in our largest table, the fact table
+     * by dividing the chan's annual gross revenue by the average item selling price
+* Date Dimension
+  * build the date dimension tables in advance
     
     
     
