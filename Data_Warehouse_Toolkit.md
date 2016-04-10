@@ -289,8 +289,69 @@
      * by dividing the chan's annual gross revenue by the average item selling price
 * Date Dimension
   * build the date dimension tables in advance
-    
-    
+  * Don't be cryptic
+    * simply populating the holidat indicator with a Y or an N would be far less useful
+    * The selling season column is set to the name of the  retailing seaon
+  * Non standard date attributes
+    * SQL date functions do not support filtering by attributes such as weekdays versus veekends, holidays, fiscal periods, seasons, or major events
+    * Look them up in a date dimension table  
+* Time dimension table
+  * Join the date and time table through the fact table
+* Product Dimension 
+  * The product dimension is almost always sourced from the operational product master file
+  * Even more than one explicit hierarchy in our product dimension table
+  * A recommended partial product dimension
+  * Each attribute is a rich source for constraining and constructing row headers
+    * Viewed in this manner, we see that drilling down is nothing more than asking for a row header that provides mor information
+    * product dimension is one of the tow or three primary dimensions in nearly every data part
+      * Great care should be taken to fill the dimensions with as many descriptive attributes as possible
+* Store Dimensions
+  * Because of this, we can roll stores up to any geographic attribute, such as zip code, country, and state in the United States
+  * It is not uncommon to reprsent multiple hierarchies in a dimension table.  Ideally, the attributes names and values should be unique across the multiple hierarchies
+  * if a numeric column is a constant attribute and is used as a report constraint or row header more often than it is used as an additive element in a summation
+    * Use dimension table 
+    > CREATE VIEW FIRST_OPEN_DATE (FIRST_OPEN_DAY_NUMBER, FIRST_OPEN_MONTH ...)
+      > AS SELECT DAY_NUMBER, MONTH, ...
+      > FROM DATE
+    * System will act as if there is another physical copy of the date dimension table called FIRST_OPEN_DATE
+      * Will have relaled all columns in the view so that they cannot be confused with the columns from the primary date dimension
+ * Promotion Dimension
+   * Lift: whether the products under promotion experienced a gain in sales during the promotional period
+     * baseline values an be estimated from prior sales history and, in some cases, with the help of sophisticated mathematical models
+   * various possible causal conditions are highly correlated
+   * Create one row in the promotion dimension for each combination of promotion conditions that occurs
+   * The separated dimensions may be more understandable to the business community if users think of these mechanisms separately.  This would be revealed during the business requirements interviews
+   * No NULL values in Fact Tables
+   * **You must avoid null keys in the fact table.  A proper design includes a row in the corresponding dimension table to identify that the dimension is not applicable to the measurement**
+* Promotion coverage factless fact table
+  * **What products were on promootion but did not sell?**
+  * Factless fact table --> relationship between involved keys
+    * Load one row in the fact table for each product on promotion in a store each day
+    * Two Step process
+      1. query the promotion coverage table to determine the univers of products that were on promotion on a given day
+      2. Determine what products sold from the POS sales fact table
+    * If you're working with data in a multidimensional online analytical processing (OLAP) cube environment, it is often easier to answer the question regarding what didn't sell because the cube typically contains explicit cells for non behavior
+* Degenerate Transaction Number Dimension
+  * traditional parent-child database vs. dimensional model headers in a dimension table
+  * POS transaction number as a ~~degenerate dimension~~
+  * Degenerate dimension represents the unique identifier of the parent
+    1. Order numbers
+    2. Invoice number
+    3. Bill of lading numbers
+* Retail Schema in Action
+  * Cross Tab Report
+* Retail Schema Extensibility
+  * we must avoid null keys in the fact table
+  * Any descriptive attribute that has a single value in th epresence of the fact table measurements is a god candidate to be added to an existing dimension or be its own dimension
+  * New dimension attributes: If new attributes are available only after a specific point in time, then "Not Available" or its equivalent should be populated in teh old dimension records
+  * New measured facts: It is almost always a mistake to mix grains in the same fact table
+  * Dimension becoming more granular: allow them to roll up perfectly in a many-to-one relationship
+* Resisting Comfort Zone Urges 
+  * Dimension Normalization (Snowflaking
+    * Happens back in the staging area, long before the data is loaded into th epresentation area's dimensional schema
+    * Redundant attributes are removed fromthe flat, denomrmalized dimension table and placed in normalized secondary dimension tables
+    * 
+     
     
     
     
