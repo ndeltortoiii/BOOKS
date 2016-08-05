@@ -315,3 +315,85 @@ what is the issue is the main question
 1. does the proof hold up
 2. the right number of choices
 3. does the proof lead to a conclusion
+
+## Ch 17 find the sweet spot
+* virtue: state of character of choice that lies in the mean
+* want to assess his ability to make a good choice
+* sweet spot depends on the circumstances
+* hear that depends 
+* practically wise
+* pundit
+  * over apply specific experience
+  * describe various scenarios and the results (model)
+* disinterest, virtue, pheneosis
+* to figure out what the audience really needs and what it is
+
+## ch 18 speak the audiences language
+* from argument of character
+* this chapter deals with the identity strategy
+* your word is their bond
+* present tense demonstrative rhetoric
+* code grooming
+
+## ch 20
+* if you hear an idiom reuse it when talking with that person
+* give cliches a twist if opponent uses them
+  * take it literally
+* play it backwards [chiasmis)
+* yea and no at same time = antithesis
+* edit yourself aloud
+* leitoties is an appropriate response for a stupid question
+
+* verbing and changing verbs to nouns, nouns to adjective by weirding language
+  * neologism
+  * way to attentionize an audience
+
+* define the issue, concede others points, speak future tense, define common place
+* you are what you eat becomes clever when you put something at the end of it
+* just touching base email
+
+## ch 23
+* set up a blog and link to wiki when trying to sell something
+  * send them your product
+  * parse as figure of speech
+* demonstrative language fails to bring pol together
+* telephone limits to logos
+  * need ethos and pathos
+* giving things always helps
+* to persuade you need to use more than your voice
+* smell taste and touch are almost always emotional
+
+## ch 24
+* cicero
+  * invention, arangement, style, put it down on paper, wow audience
+* persuasion alert: modest name dropping, who am i to question the authority
+* change the audience mind
+* what will your opponent focus on
+* discover or invent the abailable means of persuasion
+* arrangement
+  * narration tell statement of facts and figures, brief clear amd relevant to the audience, not beginning of time
+* dress the way your audience dresses
+* division: list options
+  * theory exortium, methods narration, proofs and discussion, conclusion
+* style
+  * stresses the audiences expression
+  * cristoph martin: to be eloquent is to be uneloquent
+  * rhetorical reality
+    * works best in narration of story
+  * style filter to memo
+
+1. proper language
+2. clarity: lowest reader understand?
+3. vividness: all senses
+4. decorim does the word fit the audience
+5. decorum, does it sound good when you read it out loud?
+
+* each image would fill a space
+ 
+
+
+
+
+
+
+
